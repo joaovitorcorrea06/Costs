@@ -1,5 +1,7 @@
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import Message from "../layout/Message"
+import styles from './Projects.module.css'
+
 
 function Projects(){
 
