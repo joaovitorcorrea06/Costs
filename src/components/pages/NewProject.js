@@ -4,14 +4,14 @@ import styles from './NewProject.module.css'
 
 function NewProject(){
 
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     function createPost(project) {
         // initialize cost and services
         project.cost = 0
         project.services = []
 
-        fetch('http:/localhost:5000/projects',{
+        fetch('http://localhost:5000/projects',{
             method: 'POST',
             headers: {
                 'Content-type' : 'application/json'
@@ -22,6 +22,7 @@ function NewProject(){
         .then((data)=> {
             console.log(data)
             //redirect
+            navigate('/projects')
         })
         .catch(err=> console.log(err))
 
