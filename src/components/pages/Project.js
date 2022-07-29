@@ -42,11 +42,11 @@ function Project(){
                 <Container customClass="column">
                     <div className={styles.datails_container}>
                         <h1> Projeto: {project.name}</h1>
-                        <button onClick={toggleProjectForm}>
+                        <button className={styles.btn}onClick={toggleProjectForm}>
                              {!showProjectForm ? 'Editar projeto' : 'Fechar'}
                         </button>
                         {!showProjectForm ? (
-                            <div>
+                            <div className={styles.project_info}>
                                 <p>
                                     <span> Categoria:</span> {project.category.name}
                                 </p>
@@ -58,8 +58,8 @@ function Project(){
                                 </p>
                             </div>
                         ) : (
-                            <div>
-                                <p> detalhes do projeto</p>
+                            <div className={styles.project_info}>
+                                <p> formulário do projeto</p>
                             </div>
                         )}
                     </div>
