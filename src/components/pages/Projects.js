@@ -9,17 +9,18 @@ import ProjectCard from '../project/ProjectCard'
 import Message from '../layout/Message'
 
 import styles from './Projects.module.css'
+import { useLocation } from 'react-router-dom'
 
 function Projects() {
   const [projects, setProjects] = useState([])
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectMessage] = useState('')
 
-//   const location = useLocation()
-//   let message = ''
-//   if (location.state) {
-//     message = location.state.message
-//   }
+  // const location = useLocation()
+  // let message = ''
+  // if (location.state) {
+  //   message = location.state.message
+  // }
 
   useEffect(() => {
     // Para ver o loading
